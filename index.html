@@ -9,10 +9,17 @@
             rel="icon"
             type="image/png"
             sizes="32x32"
-            href="./images/favicon-32x32.png"
+            href="./public/images/favicon-32x32.png"
         />
 
         <title>Frontend Mentor | IP Address Tracker</title>
+
+        <link
+            rel="stylesheet"
+            href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+            integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+            crossorigin=""
+        />
 
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link
@@ -20,9 +27,28 @@
             rel="stylesheet"
         />
 
+        <link rel="stylesheet" href="style.css" />
+
         <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
     </head>
     <body>
-        <h2>XD</h2>
+        <header class="header-site">
+            <div class="header-title">
+              <h1>IP Adrress tracker</h1>
+            </div>
+            <form id="form" class="form">
+                <input type="text" name="ip" placeholder="Example: 216.58.192.46">
+                <button>
+                  <img src="public/images/icon-arrow.svg" alt="">
+                </button>
+            </form>
+        </header>
+
+        <script
+            src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+            integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+            crossorigin=""
+        ></script>
+        <script src="index.js"></script>
     </body>
 </html>

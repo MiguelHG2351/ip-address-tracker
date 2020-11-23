@@ -1,0 +1,51 @@
+* {
+    font-family: 'Rubik';
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.header-site {
+    background-image: url(public/images/pattern-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 25px 18px 50px 18px;
+}
+
+.header-title {
+    color: #fff;
+    font-weight: 700;
+    text-align: center;
+}
+
+.header-title h1 {
+    font-size: 22px;
+
+}
+
+.form {
+    margin-top: 22px;
+    display: flex;
+    justify-content: center;
+}
+
+.form input, .form button {
+    border: none;
+    outline: none;
+    
+}
+
+.form input {
+    width: 85%;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+    padding: 16px;
+    font-size: 18px;
+}
+
+.form button {
+    width: 15%;
+    background-color: #000;
+    padding: 12px;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
