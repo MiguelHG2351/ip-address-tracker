@@ -4,11 +4,22 @@
     margin: 0;
 }
 
+:root {
+    --shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.15);
+}
+
 .header-site {
     background-image: url(public/images/pattern-bg.png);
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 25px 18px 50px 18px;
+    padding: 25px 0;
+    height: 280px;
+}
+
+.header-container {
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
 }
 
 .header-title {
@@ -40,12 +51,32 @@
     border-bottom-left-radius: 12px;
     padding: 16px;
     font-size: 18px;
+    caret-color: green;
 }
 
-.form button {
+.btn {
     width: 15%;
     background-color: #000;
     padding: 12px;
     border-top-right-radius: 12px;
     border-bottom-right-radius: 12px;
+    cursor: pointer;
+    transition: all ease 0.3s;
+}
+.btn:hover {
+    background-color: #3f3e40;
+}
+
+.modal {
+    position: absolute;
+    width: 100%;
+    margin-top: 20px;
+    background-color: #fff;
+    padding: 18px;
+    box-shadow: var(--shadow);
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 21px 0;
 }
