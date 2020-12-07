@@ -39,7 +39,6 @@ async function getData(ip = null) {
         const data = await response.json();
 
         if('as' in data) {
-            console.log(data)
             lat = data.location.lat
             lng = data.location.lng
             // Change INFO
