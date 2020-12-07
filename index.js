@@ -39,7 +39,8 @@ async function getData(ip = null) {
 
     lat = data.location.lat
     lng = data.location.lng
-        debugger
+
+    // Change INFO
     $ip.textContent = data.ip
     $location.textContent = `${data.location.city}, ${data.location.country} ${data.as.asn}`
     $timeZone.textContent = `UTC ${data.location.timezone}`
