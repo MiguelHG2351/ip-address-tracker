@@ -20,6 +20,11 @@
             integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
             crossorigin=""
         />
+        <script
+            src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+            integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+            crossorigin=""
+        ></script>
 
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link
@@ -38,7 +43,7 @@
                   <h1>IP Adrress tracker</h1>
                 </div>
                 <form id="form" class="form">
-                    <input type="text" name="ip" placeholder="Example: 216.58.192.46">
+                    <input type="text" name="ip" placeholder="Search for any IP address or domain">
                     <button class="btn" id="btn">
                       <img src="public/images/icon-arrow.svg" alt="">
                     </button>
@@ -46,30 +51,30 @@
                 <div class="modal">
                     <div class="ip">
                         <h4>IP address</h4>
-                        <p>192.212.174.101</p>
+                        <p id="ip">192.212.174.101</p>
                     </div>
                     <div class="location">
                         <h4>Location</h4>
-                        <p>Brooklyn, NY 10001</p>
+                        <p id="location">Brooklyn, NY 10001</p>
                     </div>
                     <div class="timezone">
                         <h4>Timezone</h4>
-                        <p>UTC - 05:00</p>
+                        <p id="timeZone">UTC - 05:00</p>
                     </div>
                     <div class="isp">
                         <h4>ISP (Internet Service Provider)</h4>
-                        <p>SpaceX Starlink</p>
+                        <p id="isp">SpaceX Starlink</p>
                     </div>
                 </div>
             </div>
         </header>
 
+        <section class="map">
+            <div id="map">
+            </div>
+        </section>
 
-        <script
-            src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
-            integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
-            crossorigin=""
-        ></script>
+        
         <script src="index.js"></script>
     </body>
 </html>
