@@ -32,23 +32,24 @@ function initMap() {
 }
 
 async function getData(ip = null) {
-    const response = await fetch(
-        `https://geo.ipify.org/api/v1?apiKey=at_JJfbw5G260aOreQhUjl4i9dRCBKRn&ipAddress=${ip}`
-    );
-    const data = await response.json();
-
-    lat = data.location.lat
-    lng = data.location.lng
-
-    // Change INFO
-    $ip.textContent = data.ip
-    $location.textContent = `${data.location.city}, ${data.location.country} ${data.as.asn}`
-    $timeZone.textContent = `UTC ${data.location.timezone}`
-    $isp.textContent = `${data.isp}`
-
-    if(!_geolocation(lat, lng)) {
-        initMap()
-    }
+    // try {
+        const response = await fetch(
+            `https://geo.ipify.org/api/v1?apiKey=at_JJfbw5G260aOreQhUjl4i9dRCBKRn&ipAddress=${ip}`
+        );
+        const data = await response.json();
+    
+        console.log(data)
+        lat = data.location.lat
+        lng = data.location.lng
+        // Change INFO
+        $ip.textContent = data.ip
+        $location.textContent = `${data.location.city}, ${data.location.country} ${data.as.asn}`
+        $timeZone.textContent = `UTC ${data.location.timezone}`
+        $isp.textContent = `${data.isp}`
+    
+        if(!_geolocation(lat, lng)) {
+            initMap()
+        }
 
 }
 
