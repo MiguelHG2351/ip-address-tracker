@@ -3,6 +3,7 @@ const $ip = document.getElementById('ip')
 const $location = document.getElementById('location')
 const $timeZone = document.getElementById('timeZone')
 const $isp = document.getElementById('isp')
+const API_KEY = 'at_JJfbw5G260aOreQhUjl4i9dRCBKRn';
 let lat;
 let lng;
 let map = L.map('map');
@@ -34,7 +35,7 @@ function initMap() {
 async function getData(ip = null) {
     // try {
         const response = await fetch(
-            `https://geo.ipify.org/api/v1?apiKey=at_JJfbw5G260aOreQhUjl4i9dRCBKRn&ipAddress=${ip}`
+            `https://geo.ipify.org/api/v1?apiKey=${API_KEY}&ipAddress=${ip}`
         );
         const data = await response.json();
 
